@@ -1,0 +1,33 @@
+<div class="py-12 bg-dark h-screen">
+  <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+          <div class="p-3 bg-white border-b border-gray-200">
+              <form method="POST" action="action.php">
+                  <div class="mb-4">
+                      <label class="text-m text-gray-600">Title <span class="text-red-500">*</span></label><br>
+                      <input type="text" class="border-2 border-gray-300 p-2 w-full rounded-lg" name="title" id="title" value="" required>
+                  </div>
+
+                  <div class="mb-4">
+                      <label class="text-m text-gray-600">Category <span class="text-red-500">*</span></label><br>
+                      <input type="text" class="border-2 border-gray-300 p-2 w-full rounded-lg" name="description" id="description" placeholder="(Optional)">
+                  </div>
+
+                  <div class="mb-8">
+                    <label class="text-m text-gray-600" for="large_size">Upload Image <span class="text-red-500">*</span></label>
+                    <input type="file" class="block border border-gray-300 rounded-lg cursor-pointer p-2 w-full" id="large_size" type="file">
+                  </div>
+
+                  <div class="mb-8">
+                      <label class="text-m text-gray-600">Content <span class="text-red-500">*</span></label><br>
+                      <ckeditor [editor]="editor" data="<p>Write any post</p>"></ckeditor>
+                  </div>
+
+                  <div class="flex p-1">
+                      <button role="submit" class="p-3 bg-blue-700 text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center" required>Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
